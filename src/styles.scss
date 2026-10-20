@@ -1,1 +1,159 @@
-/* You can add global styles to this file, and also import other style files */
+@import url(./styles/font.scss);
+
+html {
+    font-family: Roboto;
+}
+
+body {
+    background-color: darkolivegreen;//rgb(70, 125, 151);
+    color: rgb(13, 29, 16);
+    padding: 20px;
+}
+
+:host {
+
+    label {
+        margin-left: 12px;
+        cursor: pointer;
+
+        &.default {
+            cursor: default;
+        }
+        & > * {
+            cursor: pointer;
+        }
+
+        span {
+            position: relative;
+            top: -6px;
+            color: red;
+            font-size: 10px;
+        }
+    }
+
+    input,
+    button
+    select,
+    textarea {
+        border: 2px solid gray;
+        padding: 6px;
+        border-radius: 6px;
+        outline: none;
+        margin-bottom: 6px;
+    }
+
+    textarea {
+        margin-bottom: 0px;
+        resize: none;
+    }
+
+    select {
+        cursor: pointer;
+    }
+
+    *:required.ng-invalid.ng-touched,
+    *:required.ng-invalid.ng-dirty {
+        border-color: red;
+    }
+
+    *:required.ng-valid.ng-touched,
+    *:required.ng-valid.ng-dirty {
+        border-color: rgb(0, 255, 0);
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+        width: auto;
+        margin-right: 6px;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+
+        button {
+            cursor: pointer;
+            padding: 6px 18px;
+            margin-top: 6px;
+
+            &:disabled {
+                cursor: default;
+            }
+        }
+    }
+
+    .error {
+        color: red;
+        font-size: 10px;
+        margin-top: -4px;
+        margin-left: 12px;
+    }
+
+}
+
+
+
+/*
+@import url(./styles/font.scss);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Roboto;
+}
+
+body {
+    background-color: rgb(40 60 69);
+    color: white;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 1.8rem;
+}
+
+h2 {
+    font-size: 1.2rem;
+    margin: 16px 0 4px;
+}
+
+input,
+button {
+    border: 2px solid gray;
+    padding: 6px;
+    border-radius: 6px;
+    outline: none;
+    margin-bottom: 6px;
+}
+
+input {
+    width: 50%;
+}
+
+button {
+    max-width: fit-content;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+    &:hover {
+        background-color: rgb(199, 199, 199);
+    }
+
+    & + & {
+        margin-left: 6px;
+    }
+}
+
+*.ng-invalid,
+*:not(form).ng-invalid > input {
+    border-color: red;
+}
+
+*.ng-valid,
+*:not(form).ng-valid > input {
+    border-color: rgb(0, 255, 0);
+}*/
