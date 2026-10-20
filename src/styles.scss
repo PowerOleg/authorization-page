@@ -2,12 +2,14 @@
 
 html {
     font-family: Roboto;
+    font-size: 18px;
 }
 
 body {
-    background-color: darkolivegreen;//rgb(70, 125, 151);
-    color: rgb(13, 29, 16);
+    background-color: darkolivegreen;
+    color: black;
     padding: 20px;
+    
 }
 
 :host {
@@ -27,7 +29,7 @@ body {
             position: relative;
             top: -6px;
             color: red;
-            font-size: 10px;
+            font-size: 0.7rem;//font-size: 10px;
         }
     }
 
@@ -85,7 +87,7 @@ body {
 
     .error {
         color: red;
-        font-size: 10px;
+        font-size: 0.8rem;//font-size: 12px;
         margin-top: -4px;
         margin-left: 12px;
     }
