@@ -13,13 +13,14 @@ import { User } from './interfaces/user';
 })
 export class AppComponent {
   //protected readonly title = signal('Authorization page');
-  user: User = {
+  initialUser: User = {
       name: '',
-      lastNmae: '',
+      lastName: '',
       email: '',
       gender: 'male',
       country: 'ru',
       comment: '',
       agree: true,
   }
+   user: User = structuredClone(this.initialUser);
 }

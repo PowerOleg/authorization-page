@@ -1,6 +1,6 @@
 export interface User {
 name: string,
-      lastNmae: string,
+      lastName: string,
       email: string,
       gender: Gender,
       country: Country,
