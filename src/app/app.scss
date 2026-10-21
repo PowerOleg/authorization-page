@@ -1,0 +1,89 @@
+:host {
+
+    label {
+        margin-left: 12px;
+        cursor: pointer;
+
+        &.default {
+            cursor: default;
+        }
+        & > * {
+            cursor: pointer;
+        }
+
+        span {
+            position: relative;
+            top: -6px;
+            color: red;
+            font-size: 0.7rem;//font-size: 10px;
+        }
+    }
+
+    input,
+    button
+    select,
+    textarea {
+        border: 2px solid gray;
+        padding: 6px;
+        border-radius: 6px;
+        outline: none;
+        margin-bottom: 6px;
+    }
+
+    textarea {
+        margin-bottom: 0px;
+        resize: none;
+    }
+
+    select {
+        cursor: pointer;
+    }
+
+    input:required.ng-invalid.ng-dirty,
+    select:required.ng-invalid.ng-dirty,
+    textarea:required.ng-invalid.ng-dirty {
+        border-color: red;
+    }
+
+    
+    /**:required.ng-invalid.ng-touched,
+    *:required.ng-invalid.ng-dirty {
+        border-color: red;
+    }*/
+
+    *:required.ng-valid.ng-touched,
+    *:required.ng-valid.ng-dirty {
+        border-color: rgb(0, 255, 0);
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+        width: auto;
+        margin-right: 6px;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+
+        button {
+            cursor: pointer;
+            padding: 6px 18px;
+            margin-top: 6px;
+
+            &:disabled {
+                cursor: default;
+            }
+        }
+    }
+
+    .error {
+        color: red;                /* цвет текста */
+        font-size: 12px;
+        margin-top: -4px;
+        margin-left: 12px;
+        display: block;            /* на всякий случай */
+    }
+
+}

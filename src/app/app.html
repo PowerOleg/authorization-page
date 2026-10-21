@@ -3,8 +3,11 @@
 <form #userForm="ngForm">
     <div>
         <label for="name">Имя<span>*</span>:</label>
-        <input type="text" name="name" id="name" placeholder="Введите имя" [(ngModel)]="user.name" required/>
-        <p class="error">Имя обязательно</p>
+        <input type="text" name="name" id="name" placeholder="Введите имя" [(ngModel)]="user.name" required #nameRef="ngModel"/>
+        @if (nameRef.invalid) {
+            <p class="error">Имя обязательно</p>
+        }
+        
     </div>
 
     <div>

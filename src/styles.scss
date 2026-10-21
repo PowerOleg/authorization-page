@@ -12,150 +12,106 @@ body {
     
 }
 
-:host {
-
-    label {
-        margin-left: 12px;
-        cursor: pointer;
-
-        &.default {
-            cursor: default;
-        }
-        & > * {
-            cursor: pointer;
-        }
-
-        span {
-            position: relative;
-            top: -6px;
-            color: red;
-            font-size: 0.7rem;//font-size: 10px;
-        }
-    }
-
-    input,
-    button
-    select,
-    textarea {
-        border: 2px solid gray;
-        padding: 6px;
-        border-radius: 6px;
-        outline: none;
-        margin-bottom: 6px;
-    }
-
-    textarea {
-        margin-bottom: 0px;
-        resize: none;
-    }
-
-    select {
-        cursor: pointer;
-    }
-
-    *:required.ng-invalid.ng-touched,
-    *:required.ng-invalid.ng-dirty {
-        border-color: red;
-    }
-
-    *:required.ng-valid.ng-touched,
-    *:required.ng-valid.ng-dirty {
-        border-color: rgb(0, 255, 0);
-    }
-
-    input[type="radio"],
-    input[type="checkbox"] {
-        width: auto;
-        margin-right: 6px;
-    }
-
-    .buttons {
-        display: flex;
-        justify-content: center;
-        gap: 16px;
-
-        button {
-            cursor: pointer;
-            padding: 6px 18px;
-            margin-top: 6px;
-
-            &:disabled {
-                cursor: default;
-            }
-        }
-    }
-
-    .error {
-        color: red;
-        font-size: 0.8rem;//font-size: 12px;
-        margin-top: -4px;
-        margin-left: 12px;
-    }
-
-}
-
 
 
 /*
 @import url(./styles/font.scss);
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 html {
-    font-family: Roboto;
+  font-family: Roboto;
+  font-size: 18px;
 }
 
 body {
-    background-color: rgb(40 60 69);
-    color: white;
-    padding: 20px;
+  background-color: darkolivegreen;
+  // Лучше убрать color отсюда, чтобы не перебивать цвета ошибок 
+  padding: 20px;
 }
 
-h1 {
-    font-size: 1.8rem;
-}
-
-h2 {
-    font-size: 1.2rem;
-    margin: 16px 0 4px;
-}
-
+// Глобальные стили для элементов форм 
 input,
-button {
-    border: 2px solid gray;
-    padding: 6px;
-    border-radius: 6px;
-    outline: none;
-    margin-bottom: 6px;
+button,
+select,
+textarea {
+  border: 2px solid gray;
+  padding: 6px;
+  border-radius: 6px;
+  outline: none;
+  margin-bottom: 6px;
 }
 
-input {
-    width: 50%;
+textarea {
+  margin-bottom: 0px;
+  resize: none;
 }
 
-button {
-    max-width: fit-content;
+select {
+  cursor: pointer;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
+  margin-right: 6px;
+}
+
+// Глобальные стили валидации (работают везде, где есть ngModel) 
+input:required.ng-invalid.ng-touched,
+select:required.ng-invalid.ng-touched,
+textarea:required.ng-invalid.ng-touched {
+  border-color: red;
+}
+
+input:required.ng-valid.ng-touched,
+select:required.ng-valid.ng-touched,
+textarea:required.ng-valid.ng-touched {
+  border-color: green;
+}
+
+
+.error, p.error {
+  color: red;
+  font-size: 12px;
+  margin-top: -4px;
+  margin-left: 12px;
+  display: block;
+}
+
+
+label {
+  margin-left: 12px;
+  cursor: pointer;
+
+  &.default {
+    cursor: default;
+  }
+
+  & > * {
     cursor: pointer;
+  }
 
-    transition: all 0.3s ease;
-    &:hover {
-        background-color: rgb(199, 199, 199);
-    }
-
-    & + & {
-        margin-left: 6px;
-    }
+  span {
+    position: relative;
+    top: -6px;
+    color: red;
+    font-size: 0.7rem;
+  }
 }
 
-*.ng-invalid,
-*:not(form).ng-invalid > input {
-    border-color: red;
-}
 
-*.ng-valid,
-*:not(form).ng-valid > input {
-    border-color: rgb(0, 255, 0);
-}*/
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+
+  button {
+    cursor: pointer;
+    padding: 6px 18px;
+    margin-top: 6px;
+
+    &:disabled {
+      cursor: default;
+    }
+  }
+}
+*/
